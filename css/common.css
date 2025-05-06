@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #212121;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #a77cd2;
+  transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+  width: 100%;
+}
+
+ul li a:hover {
+  color: #a77cd2;
+}
+
+.centered-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-list li a {
+  text-decoration: none;
+  color: #212121;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.centered-list li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: #a77cd2;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.centered-list li a:hover {
+  color: #a77cd2;
+}
+
+.centered-list li a:hover::after {
+  width: 200%;
+  left: 50%;
+}
+
+.go-back {
+  text-decoration: none;
+  color: #212121;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.go-back::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #a77cd2;
+  transition: width 0.3s ease;
+}
+
+.go-back:hover {
+  color: #a77cd2;
+}
+
+.go-back:hover::after {
+  width: 100%;
+}
+
+.go-back:visited {
+  color: #6c4b9c;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 48px 0;
+  flex-direction: row;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+  padding: 0;
+  list-style: none;
+}
+
+#categories .item {
+  width: 392px;
+  min-height: 300px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f6f6fe;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+#categories .item h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  width: 360px;
+}
+
+#categories .item ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#categories .item ul li {
+  width: 360px;
+  border: 1px solid #808080;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.hello-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 360px;
+  margin: 0 auto;
+}
+
+.hello-form label {
+  font-size: 24px;
+  color: #212121;
+}
+
+.hello-form input[type="text"] {
+  width: 360px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #212121;
+}
+
+#name-input {
+  width: 360px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #212121;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.widget-label {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #212121;
+}
+
+.change-color {
+  background-color: #4e75ff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change-color:hover {
+  background-color: #6c8cff;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#controls input[type="number"] {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #212121;
+}
+
+#controls button[data-create] {
+  background-color: #4E75FF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls button[data-create]:hover {
+  background-color: #6C8CFF;
+}
+
+#controls button[data-destroy] {
+  background-color: #FF4E4E;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls button[data-destroy]:hover {
+  background-color: #FF7070;
+}
+
+.login-form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.login-form input,
+.hello-form input[type="text"],
+#name-input,
+input[type="text"] {
+  width: 360px;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transition: color 0.3s, border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.login-form input:hover,
+.hello-form input[type="text"]:hover,
+#name-input:hover {
+  color: #000000;
+  border-color: #000000;
+}
+
+.login-form input:active,
+.hello-form input[type="text"]:active,
+#name-input:active {
+  color: #808080;
+  border: 1px solid #808080;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4E75FF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #6C8CFF;
+}
